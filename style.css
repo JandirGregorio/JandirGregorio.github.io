@@ -1,0 +1,86 @@
+/* Variables */
+:root {
+    /* change font family */
+    --font-family: monserat, sans-serif;
+    --color-background: #0d1117;
+    --color-body: #ffffff;
+    --color-cyan: #18d5dc;
+    --color-heading: #a0a0c0;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    list-style: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* -------------------------- */
+body{
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-body);
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid black;
+}
+
+.navbar {
+    color: var(--color-heading);
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-link, #github-link {
+    text-decoration: none;
+}
+
+
+
+/* Animation keyframes */
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opactiy: 0;
+        transform: translateX(-10rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
