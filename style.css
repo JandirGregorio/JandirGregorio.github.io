@@ -66,6 +66,7 @@ h2 {
 #home, #about, #projects, #contact {
     max-width: 1000px;
     margin-inline: auto;
+    scroll-margin-top: 80px;
 }
 
 #home {
@@ -118,6 +119,7 @@ h2 {
 }
 .btn-primary {
     background-color: var(--color-primary);
+    border: 1px solid transparent;
 }
 
 .btn-primary:hover {
@@ -149,7 +151,7 @@ header {
     position: sticky;
     top: 0px;
     z-index: 1000;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .logo {
@@ -178,6 +180,23 @@ header {
 
 .navbar-link:hover {
     color: var(--color-accent);
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    height: 2px;
+    left: 50%;
+    width: 0;
+    background-color: var(--color-primary);
+    display: block;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-link:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 .navbar-link, #github-link {
@@ -422,22 +441,6 @@ footer {
         grid-template-columns: 2fr 1fr;
     }
 
-    .navbar-link::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        height: 2px;
-        left: 50%;
-        width: 0;
-        background-color: var(--color-primary);
-        display: block;
-        transition: width 0.3s ease, left 0.3s ease;
-    }
-
-    .navbar-link:hover::after {
-        width: 100%;
-        left: 0;
-    }
 }
 
 @media (min-width: 900px) {
