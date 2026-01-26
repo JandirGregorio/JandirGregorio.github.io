@@ -37,6 +37,10 @@ img {
 
 /* -------------------------- */
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     margin-inline: auto;
 }
@@ -51,8 +55,10 @@ body{
 h2 {
     font-weight: 700;
     font-size: 3rem;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     color: var(--color-primary);
+    line-height: 1;
+
 }
 
 /* Home */
@@ -74,7 +80,7 @@ h2 {
 }
 
 .home-tagline-1 {
-    font-size: 2.3rem;
+    font-size: 2.9rem;
     font-weight: 200;
     animation-name: slideRight;
     animation-duration: 1.4s;
@@ -88,7 +94,7 @@ h2 {
 
 
 .home-tagline-2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 200;
     animation-name: slideLeft;
     animation-duration: 1.4s;
@@ -165,7 +171,7 @@ header {
 
 .navbar-link {
     color: var(--color-offwhite);
-    font-size: 0.95rem;
+    font-size: 0.87rem;
     position: relative;
     transition:  color 0.3s ease;
 }
@@ -178,22 +184,6 @@ header {
     text-decoration: none;
 }
 
-.navbar-link::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    height: 2px;
-    left: 50%;
-    width: 0;
-    background-color: var(--color-primary);
-    display: block;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-.navbar-link:hover::after {
-    width: 100%;
-    left: 0;
-}
 
 
 /* About */
@@ -407,13 +397,12 @@ footer {
 }
 /* media querys */
 
-@media (max-width: 360px) {
-    .navbar {
-        display: none;
-    }
-}
 
 @media (min-width:768px) {
+
+    .navbar-link {
+        font-size: 0.95rem;
+    }
     .home-tagline-1 {
         font-size: 3rem;
     }
@@ -432,11 +421,28 @@ footer {
     .about-content {
         grid-template-columns: 2fr 1fr;
     }
+
+    .navbar-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        height: 2px;
+        left: 50%;
+        width: 0;
+        background-color: var(--color-primary);
+        display: block;
+        transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .navbar-link:hover::after {
+        width: 100%;
+        left: 0;
+    }
 }
 
 @media (min-width: 900px) {
     .home-tagline-1 {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 
     .home-tagline-2 {
