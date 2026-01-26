@@ -11,48 +11,56 @@
 <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <p class="logo">JG<span id="logo-period">.</span></p>
-        <nav>
-            <ul class="navbar">
-                <li><a class="navbar-link" href="#home">[HOME]</a></li>
-                <li><a class="navbar-link" href="#about">[ABOUT]</a></li>
-                <li><a class="navbar-link" href="#work">[PROJECTS]</a></li>
-                <li><a class="navbar-link" href="#contact">[CONTACT]</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
 
         <!-- Hero section -->
         <section id="home">
             <h1 class="home-tagline-1">Hello, I'm <span id="tagline-name">Jandir</span>.</h1>
-            <p class="home-tagline-2">I'm a Software Engineer</p>
+            <h3 class="home-tagline-2">I'm a Software Engineer.</h3>
             <div class="home-buttons">
-                <a href="#work" class="btn btn-projects">View Projects →</a>
-                <a href="#contact" class="btn btn-contact">Contact Me</a>
+                <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
             </div>
         </section>
         
+        <!-- Header -->
+        <header>
+            <p class="logo">JAN<span id="logo-period">.</span>DEV</p>
+            <nav>
+                <ul class="navbar">
+                    <li><a class="navbar-link" href="#home">HOME</a></li>
+                    <li><a class="navbar-link" href="#about">ABOUT</a></li>
+                    <li><a class="navbar-link" href="#projects">PROJECTS</a></li>
+                    <li><a class="navbar-link" href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
         <!-- About section -->
         <section id="about">
+            
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="" alt="Jandir Gregorio">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deserunt veritatis quo libero at soluta quae, consequuntur eos totam. Accusantium quod esse praesentium iure ullam aut ipsa nobis dolor perspiciatis repudiandae assumenda nemo blanditiis deleniti, corrupti vero veritatis porro, officia eius cupiditate molestiae amet! Dicta ea deleniti quisquam explicabo cumque!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit soluta magnam doloremque enim unde necessitatibus nemo sapiente, sunt repellat rem.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, corporis!</p>
+                <div class="about-bio">
+                <img src="https://photos.smugmug.com/photos/i-vH6ZCqf/0/KtTn8jfhzz9mQhLSB5f9pqVW6dTnKC2nPscZ8ngQV/X4/i-vH6ZCqf-X4.jpg" alt="Jandir Gregorio" id="profile-picture">
+
+                <div class="about-text">
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem deserunt veritatis quo libero at soluta quae, consequuntur eos totam. Accusantium quod esse praesentium iure ullam aut ipsa nobis dolor perspiciatis repudiandae assumenda nemo blanditiis deleniti, corrupti vero veritatis porro, officia eius cupiditate molestiae amet! Dicta ea deleniti quisquam explicabo cumque!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit soluta magnam doloremque enim unde necessitatibus nemo sapiente, sunt repellat rem.</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, corporis!</p>
+                </div>
+            </div>
                 
                 <div class="about-skills">
-                    <h3>Tech Stack</h3>
-                    <ul >
+                    <h3 id="skills-title">⚙ Tech Stack</h3>
+                    <ul class="skills-list">
                         <li>HTML5</li>
                         <li>CSS3</li>
                         <li>JavaScript</li>
                         <li>Java</li>
                         <li>Node.js</li>
                         <li>Git</li>
+                        <li>Python</li>
                     </ul>
                 </div>
             </div>
@@ -64,29 +72,29 @@
             <h2>Projects</h2>
             <ul class="projects-grid">
                 <li class="project-card">
-                    <img src="" alt="CLI project image">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20220311223132/init.png" alt="CLI project image" class="project-image">
                     <h3>Quiz Game</h3>
                     <p>CLI project Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, ab?</p>
                     <ul class="project-tags">
                         <li>JavaScript</li>
                         <li>Node.js</li>
                     </ul>
-                    <div class="project links">
-                        <a href="" class="project-link">Github</a>
+                    <div class="project-links">
+                        <a href="" class="project-link">Github→</a>
                     </div>
                 </li>
                 <li class="project-card">
-                    <img src="" alt="Portfolio website">
+                    <img src="https://cdn.dribbble.com/userupload/34116204/file/original-0baa435d739a15b1ecc612fd4eb332f4.png?resize=400x0" alt="Portfolio website" class="project-image">
                     <h3>This Portfolio!</h3>
                     <p>portfolio description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, ab?</p>
                     <ul class="project-tags">
                         <li>HTML5</li>
-                        <li>CSS4</li>
+                        <li>CSS3</li>
                         <li>Responsive</li>
                     </ul>
-                    <div class="project links">
-                        <a href="">LIVE</a>
-                        <a href="" class="project-link">Github</a>
+                    <div class="project-links">
+                        <a href="JandirGregorio.github.io" class="project-link">LIVE→</a>
+                        <a href="" class="project-link" class="project-link">Github→</a>
                     </div>
                 </li>
             </ul>
@@ -98,41 +106,37 @@
             <p class="contact-intro">Lorem ipsum dolor sit amet.</p>
             <div class="contact-content">
                 <form class="contact-form" action="" method="POST">
-                    <div class="form-row">
-
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="user-name"
-                            placeholder="Enter name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="user_email" placeholder="Enter email" required>
-                        </div>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="user-name"
+                        placeholder="Enter name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="user_email" placeholder="Enter email" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message" class="form-label">Message</label>
                         <textarea id="message" name="user-message" rows="5" placeholder="Your message..." required></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-neon">Submit</button>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
-            </div>
-            <div class="contact-info">
-                <h3>Other Ways to Connect</h3>
-                <ul class="contact-links">
-                    <li><a href="jandirgreg@gmail.com">jandirgreg@gmail.com</a></li>
-                    <li><a href="https://github.com/JandirGregorio">github.com/JandirGregorio</a></li>
-                    <li><a href="httts://linkedin.com/in/JandirGregorio">linkedin.com/in/JandirGregorio</a></li>
-                </ul>
+                <div class="contact-info">
+                    <h3>Other Ways to Connect</h3>
+                    <ul class="contact-links">
+                        <li><a href="jandirgreg@gmail.com">jandirgreg@gmail.com</a></li>
+                        <li><a href="https://github.com/JandirGregorio">GitHub</a></li>
+                        <li><a href="httts://linkedin.com/in/JandirGregorio">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Made with ❤ by <a id="github-link" href="github.com/JandirGregorio">Jandir Gregorio</a></p>
+        <p>Designed & Built By Jandir Gregorio · 2026</a></p>
     </footer>
 
 </body>
