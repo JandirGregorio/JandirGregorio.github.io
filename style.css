@@ -227,8 +227,6 @@ header {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    margin-inline: auto;
-    margin-bottom: 50px;
     position: relative;
     /* z-index: 1; */
 }
@@ -236,6 +234,10 @@ header {
 .image-container {
     position: relative;
     max-width: 100%;
+    width: 200px;
+    height: 200px;
+    margin-inline: auto;
+    margin-bottom: 50px;
     z-index: 1;
 }
 /* Gradient profile-picture effect */
@@ -251,7 +253,7 @@ header {
     position: absolute;
     height: 200px;
     width: 200px;
-    background-image: conic-gradient(from var(--angle),  var(--color-primary), var(--color-accent), var(--color-blue), var(--color-primary));
+    background-image: conic-gradient(from var(--angle), var(--color-primary), var(--color-accent), var(--color-blue), var(--color-primary));
     top: 50%;
     left: 50%;
     border-radius: 50%;
@@ -259,11 +261,12 @@ header {
     padding: 3px;
     animation: 3s spin linear infinite;
     z-index: -1;
+    /* clip-path: circle(50%); */
 }
 
 .image-container::before {
     filter:blur(1.5rem);
-    opacity: 0.5;
+    opacity: 0.2;
 }
 /* ------------------------------- */
 #skills-title {
