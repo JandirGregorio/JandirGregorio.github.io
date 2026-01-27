@@ -290,6 +290,8 @@ header {
 
 .project-image {
     height: 180px;
+    width: 300px;
+    object-fit: cover;
     margin-inline: auto;
 }
 
@@ -321,9 +323,6 @@ header {
 .project-link:hover {
     opacity: 0.7;
 }
-
-
-
 
 /* Contact */
 
