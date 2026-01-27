@@ -230,12 +230,13 @@ header {
     margin-inline: auto;
     margin-bottom: 50px;
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .image-container {
     position: relative;
     max-width: 100%;
+    z-index: 1;
 }
 /* Gradient profile-picture effect */
 
@@ -250,13 +251,14 @@ header {
     position: absolute;
     height: 200px;
     width: 200px;
-    background-image: conic-gradient(from var(--angle), var(--color-primary), var(--color-accent), var(--color-blue), var(--color-primary));
+    background-image: conic-gradient(from var(--angle),  var(--color-primary), var(--color-accent), var(--color-blue), var(--color-primary));
     top: 50%;
     left: 50%;
     border-radius: 50%;
     translate: -50% -50%;
     padding: 3px;
     animation: 3s spin linear infinite;
+    z-index: -1;
 }
 
 .image-container::before {
