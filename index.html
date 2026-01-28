@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -16,7 +16,7 @@
         <!-- Hero section -->
         <section id="home">
             <h1 class="home-tagline-1">Hello, I'm <span id="tagline-name">Jandir</span>.</h1>
-            <h3 class="home-tagline-2">I'm a Software Engineer.</h3>
+            <h3 class="home-tagline-2">A Software Engineer passionate about crafting digital experiences with clean code and meaningful user interfaces.</h3>
             <div class="home-buttons">
                 <a href="#projects" class="btn btn-primary">View Projects ↓</a>
                 <a href="#contact" class="btn btn-secondary">Contact Me</a>
@@ -27,7 +27,7 @@
         <header>
             <p class="logo">JG<span id="logo-period">.</span></p>
             <nav>
-                <ul class="navbar">
+                <ul class="nav-links">
                     <li><a class="navbar-link" href="#home">HOME</a></li>
                     <li><a class="navbar-link" href="#about">ABOUT</a></li>
                     <li><a class="navbar-link" href="#projects">PROJECTS</a></li>
@@ -46,19 +46,22 @@
             <div class="about-content">
                 <div class="about-text">
                     
-                    <p>I'm a software engineering fellow at the Marcy Lab School passionate about creating functional programs and websites. I believe everything is.........</p>
-                    <p>Before joining tech, </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, corporis!</p>
+                    <p>I'm Jandir Gregorio, a guatemalan sofware engineering fellow at The Marcy Lab School In Brooklyn, NY, currently living in NJ. Before joining Marcy, I studied Computer Science at my local community college.</p>
+                    <p>While discovering programming I realized how intricate, complex, and sophisticated a program can be. I'm committed to the philosophy of life-long learning. Exploring new technologies, problem-solving, and never running out of new things to discover, drives my exciment and passion about programming. Technology inspires me because it can provide a financial stability path and a flexible work schedule, making it possible to work from anywhere in the world!</p>
+                    <p>When I'm not at my computer, you can find me playing video games, watching Anime, or reading books!</p>
                 </div>
                 <div class="about-skills">
-                    <h3 id="skills-title">⚙ Tech Stack</h3>
+                    <h3 id="skills-title">⚙ Technical Skills</h3>
                     <ul class="skills-list">
                         <li>HTML5</li>
                         <li>CSS3</li>
+                        <li>UML</li>
                         <li>JavaScript</li>
                         <li>Java</li>
+                        <li>OOP</li>
                         <li>Node.js</li>
-                        <li>Git</li>
+                        <li>Git & Github</li>
+                        <li>Command Line</li>
                     </ul>
                 </div>
             </div>
@@ -76,6 +79,7 @@
                     <ul class="project-tags">
                         <li>JavaScript</li>
                         <li>Node.js</li>
+                        <li>OOP</li>
                     </ul>
                     <div class="project-links">
                         <a href="https://github.com/JandirGregorio/cli-quiz-game" class="project-link">Github→</a>
@@ -118,17 +122,17 @@
                 <form class="contact-form" action="https://formspree.io/f/mreqldnk" method="POST">
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="user-name"
+                        <input type="text" id="name" name="userName"
                         placeholder="Enter name" required>
                     </div>
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="user_email" placeholder="Enter email" required>
+                        <input type="email" id="email" name="userEmail" placeholder="Your@email.com" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="user-message" rows="5" placeholder="Your message..." required></textarea>
+                        <textarea id="message" name="userMessage" rows="5" cols="40" placeholder="Enter your message..." required></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Send Message</button>
