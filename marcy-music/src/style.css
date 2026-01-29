@@ -1,0 +1,148 @@
+/* -------------------------------- */
+/* ---------- CSS Reset ----------- */
+/* -------------------------------- */
+:root {
+  --color-black: #000000;
+  --color-gray: #1e1e1e;
+  --color-green: #1db954;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Add your styles below */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: var(--color-gray);
+}
+
+header figure {
+  width: 120px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+nav>a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: .2s;
+}
+
+nav>a:hover {
+  color: var(--color-green);
+  transform: scale(1.05);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: var(--color-black);
+}
+
+h1 {
+  color: var(--color-green);
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+main h2 {
+  font-size: 1.5rem;
+  color: var(--color-green);
+}
+
+.playlist-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.playlist-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.grid-play-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-black);
+  border-radius: 4px;
+  padding: 8px;
+  gap: 15px;
+}
+
+.grid-play-item p {
+  font-weight: bold;
+}
+
+.play-img img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+} 
+
+.albums {
+  display: flex;
+  gap: 20px;
+}
+
+.album-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.album-item {
+  background-color: var(--color-black);
+  padding: 15px;
+  border-radius: 8px;
+  width: 180px;
+}
+
+.album-item img {
+  border-radius: 4px;
+}
+.album-item figcaption {
+  font-weight: bold;
+}
+
+.album-item p {
+  font-size: .9rem;
+}
+
+footer {
+  display: flex;
+  padding: 30px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--color-green);
+}
