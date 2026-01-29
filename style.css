@@ -1,15 +1,13 @@
 /* Variables */
 :root {
-    /* change font family */
     --font-family: "Quicksand", sans-serif;
     --color-background: #1a1a1a;
     --color-body: #ffffff;
     --color-offwhite: #e0e0e0;
     --color-primary: #ff4d5a;
     --color-gray: rgba(40, 40, 40, 0.95);
-    --color-accent: #8d7da3;
-    --color-blue: #4a5568;
-    --color-border: #3d3d3d;
+    --color-blue: #4b5563;
+    --color-border: #3e3e3e;
 }
 
 /* CSS Reset */
@@ -56,7 +54,7 @@ body{
 }
 
 h2 {
-    font-weight: 700;
+    font-weight: 300;
     font-size: 3rem;
     margin-bottom: 50px;
     color: var(--color-primary);
@@ -69,6 +67,7 @@ h2 {
     max-width: 1000px;
     margin-inline: auto;
     scroll-margin-top: 80px;
+    /* border: 1px solid var(--color-border); */
 }
 
 /* Home */
@@ -96,6 +95,7 @@ h2 {
     z-index: -1;
     opacity: 0.09;
 }
+
 .home-tagline-1 {
     max-width: 1000px;
     font-size: 2.9rem;
@@ -133,31 +133,21 @@ h2 {
     padding: 14px 28px;
     cursor: pointer;
     letter-spacing: .1em;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-    color: var(--color-body);
-    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: var(--color-primary);
 }
+
 .btn-primary {
-    background-color: var(--color-primary);
-    border: 1px solid transparent;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    background-color: var(--color-accent);
-    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
-}
-
-.btn-secondary {
     background-color: transparent;
     border: 1px solid var(--color-primary);
 }
 
-.btn-secondary:hover {
-    border-color: var(--color-accent);
+.btn-primary:hover {
     transform: translateY(-2px);
-    color: var(--color-primary);
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+    color: var(--color-body);
 }
+
 /* Header */
 
 header {
@@ -176,8 +166,8 @@ header {
 
 .logo {
     font-size: 1.6rem;
-    font-weight: 700;
     letter-spacing: 0.1em;
+    font-weight: 200;
 }
 
 #logo-period {
@@ -197,7 +187,7 @@ header {
 }
 
 .navbar-link:hover {
-    color: var(--color-accent);
+    color: var(--color-blue);
 }
 
 .navbar-link::after {
@@ -221,15 +211,12 @@ header {
     text-decoration: none;
 }
 
-
-
 /* About */
 
 #about {
     padding: 80px 40px;
     background-color: var(--color-gray);
 }
-
 
 .about-content {
     display: grid;
@@ -242,13 +229,6 @@ header {
     gap: 20px;
 }
 
-#profile-picture {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
 .image-container {
     position: relative;
     max-width: 100%;
@@ -258,6 +238,14 @@ header {
     margin-bottom: 50px;
     z-index: 1;
 }
+
+#profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 /* Gradient profile-picture effect */
 
 @property --angle {
@@ -271,7 +259,7 @@ header {
     position: absolute;
     height: 200px;
     width: 200px;
-    background-image: conic-gradient(from var(--angle), var(--color-primary), var(--color-accent), var(--color-blue), var(--color-primary));
+    background-image: conic-gradient(from var(--angle), var(--color-primary), var(--color-blue), var(--color-offwhite), var(--color-primary));
     top: 50%;
     left: 50%;
     border-radius: 50%;
@@ -285,9 +273,11 @@ header {
     filter:blur(1.5rem);
     opacity: 0;
 }
+
 /* ------------------------------- */
 #skills-title {
     font-size: 1.6rem;
+    font-weight: 300;
     letter-spacing: 0.05em;
     margin-bottom: 20px;
 }
@@ -299,18 +289,17 @@ header {
 }
 
 .skills-list li {
-    background-color: rgba(255, 100, 112, .7);
     padding: 10px 18px;
     font-size: 0.9rem;
-    border: 1px solid transparent;
+    border: 1px solid var(--color-primary);
     transition: all 0.2s ease;
 }
 
 .skills-list li:hover {
-    border-color: var(--color-accent);
-    background-color: var(--color-primary);
+    background-color: rgba(255, 77, 89, 0.152);
     transform: translateY(-2px);
 }
+
 /* Projects */
 
 #projects {
@@ -324,6 +313,7 @@ header {
 
 .project-card {
     display: grid;
+    align-items: start;
     background-color: var(--color-gray);
     gap: 20px;
     padding: 30px;
@@ -332,8 +322,12 @@ header {
 }
 
 .project-card:hover {
-    border-color: var(--color-accent);
+    border-color: var(--color-blue);
     transform: translateY(-3px);
+}
+
+.project-card h3 {
+    font-weight: 400;
 }
 
 .project-card p {
@@ -351,8 +345,8 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    
 }
-
 
 .project-tags li {
     background-color: var(--color-background);
@@ -425,12 +419,12 @@ header {
 }
 
 #name::placeholder, #email::placeholder, #message::placeholder {
-    opacity: 0.5;
+    opacity: 1;
 }
 
 #name:focus, #email:focus, #message:focus {
     outline: none;
-    border-color: var(--color-accent);
+    border-color: var(--color-blue);
 }
 
 /* Contact Info */
@@ -440,6 +434,7 @@ header {
     letter-spacing: 0.05em;
     margin-bottom: 20px;
     color: var(--color-primary);
+    font-weight: 500;
 }
 
 .contact-links {
@@ -457,7 +452,6 @@ header {
     color: var(--color-primary);
 }
 
-
 /* Footer */
 footer {
     text-align: center;
@@ -467,6 +461,19 @@ footer {
 }
 /* media querys */
 
+@media (min-width: 375px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (min-width:768px) {
     body {
