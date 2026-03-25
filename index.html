@@ -11,94 +11,94 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <main aria-label="Portfolio main content">
         <!-- Hero section -->
-        <section id="home">
+        <section id="home" aria-label="Hero section">
             <h1 class="home-tagline-1">Hello, I'm <span id="tagline-name">Jandir</span>.</h1>
             <h3 class="home-tagline-2">A Software Engineer passionate about crafting thoughtful web experiences.</h3>
             <div class="home-buttons">
-                <a href="#about" class="btn btn-primary">Get To Know Me↓</a>
+                <a href="#about" class="btn btn-primary" aria-label="Navigate to About section">Get To Know Me↓</a>
             </div>
         </section>
 
         <!-- Header -->
-        <header>
-            <a href="#home" class="logo">JG<span id="logo-period">.</span></a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a class="navbar-link" href="#home">HOME</a></li>
-                    <li><a class="navbar-link" href="#about">ABOUT</a></li>
-                    <li><a class="navbar-link" href="#projects">PROJECTS</a></li>
-                    <li><a class="navbar-link" href="#contact">CONTACT</a></li>
+        <header aria-label="Site header">
+            <a href="#home" class="logo" aria-label="Jandir Gregorio - Back to top">JG<span id="logo-period">.</span></a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" role="list">
+                    <li><a class="navbar-link" href="#home" aria-label="Navigate to Home section">HOME</a></li>
+                    <li><a class="navbar-link" href="#about" aria-label="Navigate to About section">ABOUT</a></li>
+                    <li><a class="navbar-link" href="#projects" aria-label="Navigate to Projects section">PROJECTS</a></li>
+                    <li><a class="navbar-link" href="#contact" aria-label="Navigate to Contact section">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
         <!-- About section -->
-        <section id="about">
+        <section id="about" aria-label="About me section">
             <h2>About Me</h2>
-            <figure class="image-container">
+            <figure class="image-container" aria-label="Jandir Gregorio profile picture">
                 <img src="./img/profile-picture.jpg" alt="Jandir Gregorio" id="profile-picture">
             </figure>
 
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text" aria-label="About me description">
                     <p>I'm Jandir Gregorio, a guatemalan sofware engineering fellow at The Marcy Lab School in Brooklyn, NY, currently living in NJ. Before joining Marcy, I studied Computer Science at Mercer County Community College.</p>
                     <p>While discovering programming I realized how intricate, complex, and sophisticated a program can be. I'm committed to the philosophy of life-long learning. Exploring new technologies, problem-solving, and never running out of new things to discover, drives my exciment and passion about programming. Technology inspires me because it can provide a financial stability path and a flexible work schedule, making it possible to work from anywhere in the world!</p>
                     <p>When I'm not at my computer, you can find me playing video games, watching anime, or reading books!</p>
                 </div>
-                <div class="about-skills">
+                <div class="about-skills" aria-label="Technical skills">
                     <h3 id="skills-title">⚙ Technical Skills</h3>
-                    <ul class="skills-list">
+                    <ul class="skills-list" aria-labelledby="skills-title" role="list">
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- projects section -->
-        <section id="projects">
+        <section id="projects" aria-label="Projects section">
             <h2>Projects</h2>
-            <ul class="projects-grid">
+            <ul class="projects-grid" aria-label="List of projects" role="list">
             </ul>
         </section>
 
         <!-- Contact section -->
-        <section id="contact">
+        <section id="contact" aria-label="Contact section">
             <h2>Get In Touch</h2>
             <p class="contact-intro">I'm currently looking for new opportunities. If you have a question or want to say hello, feel free to reach out!</p>
             <div class="contact-content">
-                <form class="contact-form" action="https://formspree.io/f/mreqldnk" method="POST">
+                <form class="contact-form" action="https://formspree.io/f/mreqldnk" method="POST" aria-label="Contact form">
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" id="name" name="userName"
-                        placeholder="Enter name" required>
+                        placeholder="Enter name" required aria-required="true" aria-describedby="name-error">
                     </div>
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="userEmail" placeholder="Your@email.com" required>
+                        <input type="email" id="email" name="userEmail" placeholder="Your@email.com" required aria-required="true" aria-describedby="email-error">
                     </div>
 
                     <div class="form-group">
                         <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="userMessage" rows="5" cols="30" placeholder="Enter your message..." required></textarea>
+                        <textarea id="message" name="userMessage" rows="5" cols="30" placeholder="Enter your message..." required aria-required="true" aria-describedby="message-error"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" aria-label="Submit contact form">Send Message</button>
 
-                    <div id="success-message" class="hidden btn btn-secondary"></div>
-                    <div id="error-message" class="hidden btn btn-secondary"></div>
+                    <div id="success-message" class="hidden btn btn-secondary" aria-live="polite" role="status"></div>
+                    <div id="error-message" class="hidden btn btn-secondary" aria-live="assertive" role="alert"></div>
                 </form>
-                <div class="contact-info">
+                <div class="contact-info" aria-label="Other ways to connect">
                     <h3>Other Ways to Connect</h3>
-                    <ul class="contact-links">
-                        <li><a href="mailto:jandirgreg@gmail.com">jandirgreg@gmail.com</a></li>
-                        <li><a href="https://github.com/JandirGregorio">GitHub</a></li>
-                        <li><a href="httts://linkedin.com/in/JandirGregorio">LinkedIn</a></li>
+                    <ul class="contact-links" role="list">
+                        <li><a href="mailto:jandirgreg@gmail.com" aria-label="Send email to jandirgreg@gmail.com">jandirgreg@gmail.com</a></li>
+                        <li><a href="https://github.com/JandirGregorio" aria-label="Visit Jandir's GitHub profile" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="httts://linkedin.com/in/JandirGregorio" aria-label="Visit Jandir's LinkedIn profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer aria-label="Site footer">
         <p>Designed & Built By Jandir Gregorio · 2026</p>
     </footer>
 
