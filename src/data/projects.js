@@ -28,7 +28,7 @@ export const projects = [
     img: "/img/music-page-picture.png",
     description: "A music replica page built from scratch. Take a look at my code on GitHub.",
     skillTags: ['HTML5', 'CSS3'],
-    github: "https://github.com/The-Marcy-Lab-School-Assignments/swe-3-1-recipe-card-JandirGregorio",
+    github: "https://github.com/The-Marcy-Lab-School-Assignments/swe-3-2-flexbox-grid-from-scratch-JandirGregorio/tree/draft",
     live: "marcy-music/src/index.html",
   },
 ];
