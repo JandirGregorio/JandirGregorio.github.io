@@ -6,6 +6,7 @@ export const projects = [
     skillTags: ['HTML5', 'CSS3', 'Vite','JavaScript', 'Node.js', 'Interactive', 'API Fetching'],
     github: "https://github.com/jandir-ashar-mls/mod-4-project",
     live: 'https://jandir-ashar-mls.github.io/mod-4-project/',
+    presentation: 'https://docs.google.com/presentation/d/1Z_hcbSuYfNQ-k1FuPovGaw46R7KNh13GR6GggvMcfV8/edit?usp=sharing',
   },
   {
     name: "CLI Quiz Game",
@@ -14,6 +15,7 @@ export const projects = [
     skillTags: ['JavaScript', 'Node.js', 'OOP'],
     github: "https://github.com/JandirGregorio/cli-quiz-game",
     live: null,
+    presentation: null,
   },
   {
     name: "This Portfolio!",
@@ -22,6 +24,7 @@ export const projects = [
     skillTags: ['HTML5', 'CSS3', 'Vite', 'JavaScript', 'Node.js'],
     github: "https://github.com/JandirGregorio/JandirGregorio.github.io",
     live: "JandirGregorio.github.io",
+    presentation: null,
   },
   {
     name: "Marcy Music Replica",
@@ -30,5 +33,6 @@ export const projects = [
     skillTags: ['HTML5', 'CSS3'],
     github: "https://github.com/The-Marcy-Lab-School-Assignments/swe-3-2-flexbox-grid-from-scratch-JandirGregorio/tree/draft",
     live: "marcy-music/src/index.html",
+    presentation: null,
   },
 ];

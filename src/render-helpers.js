@@ -18,6 +18,7 @@ export const renderProjects = (projects) => {
     const projectLinks = document.createElement('div');
     const ghLink = document.createElement('a');
     const liveLink = document.createElement('a');
+    const presentationLink = document.createElement('a');
 
     // Modify
 
@@ -30,24 +31,39 @@ export const renderProjects = (projects) => {
     projectSkills.classList.add('project-tags');
     projectLinks.classList.add('project-links');
     ghLink.href = project.github;
+    ghLink.target = '_blank';
+    ghLink.rel = 'noopener noreferrer';
     ghLink.classList.add('project-link');
     ghLink.textContent = 'Github→';
 
+    // Append
+
+    projectLinks.append(ghLink);
+
     if (project.live) {
       liveLink.href = project.live;
+      liveLink.target = '_blank';
+      liveLink.rel = 'noopener noreferrer';
       liveLink.classList.add('project-link');
       liveLink.textContent = 'LIVE→';
       projectLinks.append(liveLink);
     }
 
-    // Append
+    if (project.presentation) {
+      presentationLink.href = project.presentation;
+      presentationLink.target = '_blank';
+      presentationLink.rel = 'noopener noreferrer';
+      presentationLink.classList.add('project-link');
+      presentationLink.textContent = 'Presentation→';
+      projectLinks.append(presentationLink);
+    }
 
     project.skillTags.forEach((skill) => {
       const skillItem = document.createElement('li');
       skillItem.textContent = skill;
       projectSkills.append(skillItem);
     });
-    projectLinks.append(ghLink);
+
     projectCard.append(projectImage, projectTitle, projectDescription, projectSkills, projectLinks);
     projectsGrid.append(projectCard);
   });
@@ -68,6 +84,11 @@ export const renderSkills = (skills) => {
   });
 };
 
+/**
+ * 
+ * @param {String} type - indicates if the render was a 'success' or there was an 'error'
+ * @param {String} message - message displayed to user
+ */
 
 export const renderFormMessage = (type, message) => {
   const isSuccess = type === 'success';
